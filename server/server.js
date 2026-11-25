@@ -53,6 +53,7 @@ const owned = wrap(async (req, res, next) => {
 
 const pick = (b) => ({ title: b.title, subject: b.subject, description: b.description,
   maxMembers: b.maxMembers, mode: b.mode, location: b.location, schedule: b.schedule });
+  app.get('/', (req, res) => res.json({ message: 'Study Group Finder API is running' }));
 
 // ---------- Auth ----------
 app.post('/api/auth/register', wrap(async (req, res) => {
